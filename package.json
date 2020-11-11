@@ -1,0 +1,32 @@
+{
+  "name": "level-up-testing-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build && node ./dist/index.js",
+    "build": "parcel build ./src/*.js -d ./build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Makwe-O/level-up-testing-javascript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Makwe-O/level-up-testing-javascript/issues"
+  },
+  "homepage": "https://github.com/Makwe-O/level-up-testing-javascript#readme",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "parcel-bundler": "^1.12.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-decorators": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-react": "^7.12.5"
+  }
+}
