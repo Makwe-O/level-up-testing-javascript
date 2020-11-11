@@ -1,23 +1,5 @@
 import { subtract, sum, multiply } from "./math";
-
-const expect = (result) => {
-  return {
-    toBe: (actual) => {
-      if (actual !== result) {
-        throw new Error(`Expected ${actual} but got ${result}`);
-      } else {
-        console.log("Test passed");
-      }
-    },
-    toBeGreater: (bar) => {
-      if (result <= bar) {
-        throw new Error(`Expected ${result} to be greater than ${bar}`);
-      } else {
-        console.log("Test passed");
-      }
-    },
-  };
-};
+import expect from "./assertion";
 
 const test = (title, callback) => {
   try {
@@ -38,7 +20,6 @@ test("it should subtract number correctly", () => {
   const result = subtract(8, 4);
   const actual = 4;
   expect(result).toBe(actual);
-  expect(result).toBeGreater(actual);
 });
 test("it should be greater that bar", () => {
   const result = sum(4, 1);
