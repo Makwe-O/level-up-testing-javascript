@@ -1,4 +1,4 @@
-const expect = (result) => {
+export const expect = (result) => {
   return {
     toBe: (actual) => {
       if (actual !== result) {
@@ -17,4 +17,12 @@ const expect = (result) => {
   };
 };
 
-export default expect;
+export const test = (title, callback) => {
+  try {
+    callback();
+    console.log(`> ${title}`);
+  } catch (err) {
+    console.error(`X ${title}`);
+    console.error(err);
+  }
+};

@@ -1,15 +1,5 @@
 import { subtract, sum, multiply } from "./math";
-import expect from "./assertion";
-
-const test = (title, callback) => {
-  try {
-    callback();
-    console.log(`> ${title}`);
-  } catch (err) {
-    console.error(`X ${title}`);
-    console.error(err);
-  }
-};
+import { expect, test } from "./assertion";
 
 test("it should add number correctly", () => {
   const result = sum(2, 4);
